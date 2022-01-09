@@ -1,0 +1,6 @@
+.wrapper{
+    flex-direction:column;
+}
+.left{
+    margin-bottom:50px;
+}

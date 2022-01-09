@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+body{
+    font-family:"Merriweather Sans", sans-serif;
+    color:#4c6986;
+}
+.wrapper{
+    height:500px;
+    /* background-color:yellow; */
+    max-width: 1440px;
+    display:flex;
+    margin:0 auto;
+    align-items:center;
+    justify-content:space-between;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:40px;
+}
+.title{
+    max-width:500px;
+}
+.restart{
+    width:175px;
+    height:50px;
+    display:flex;
+    /* background-color:pink; */
+    transition: all 0.2s ease-in-out;
+    font-weight:bold;
+    margin-top:30px;
+    justify-content: center;
+    align-items:center;
+    border-radius:50px;
+    border:2px solid #4c6086;
+}
+h1{
+    font-size:70px;
+    font-weight: bold;
+}
+.restart:hover{
+    cursor:pointer;
+    background-color:#4c6086;
+    color:white;
+}
+.game{
+    width:500px;
+    display:flex;
+    flex-direction: column;
+    height:500px;
+    
+}
+.header{
+    display:flex;
+    color:#9a9a9a;
+    font-size:24px;
+
+}
+.header .player-X{
+    flex:1;
+    border-bottom:1px solid #eee;
+    padding-bottom:8px;
+}
+.player-X.active{
+    color:#42bed7;
+    border-color:#42bed7
+}
+.header .player-O{
+    flex:1;
+    border-bottom:1px solid #eee;
+    padding-bottom:8px;
+}
+.player-O.active{
+    color:#d7bafb;
+    border-color:#d7bafb
+}
+.board{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    grid-gap:0;
+    flex-grow: 1;
+    /* background-color:yellow; */
+    padding:10px;
+}
+.board-tile{
+background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:80px;
+    cursor:pointer; 
+
+}
+.board-tile:hover{
+    background-color:#eee;
+
+}
+.board-tile:not(:nth-child(3n)){
+    border-right:3px solid rgba(137, 163, 189, 0.7)
+}
+.board-tile:not(:nth-last-child(-n+3)){
+    border-bottom:3px solid rgba(137, 163, 189, 0.7)
+}
+.tile-x{
+    color:#42bed7;
+}
+.tile-o{
+    color:#d7bafb;
+}
+.tile-winner span{
+    color:#23ce6b;
+}
+/* @media screen and (max-width: 480px) {
+    .wrapper{
+        flex-direction:column;
+    }
+} */
